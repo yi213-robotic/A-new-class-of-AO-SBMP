@@ -1,4 +1,24 @@
-# A-new-class-of-asymptotically-optimal-sampling-based-motion-planning
-A new class of asymptotically optimal sampling-based motion planning based on lazy bidirectional heuristic search will be released soon!
+# A New Class of Asymptotically Optimal Sampling-Based Motion Planners
 
-Overview of our work:
+A new class of **asymptotically optimal sampling-based motion planners** built upon **lazy bidirectional heuristic search** will be released soon.
+
+## Overview
+
+The framework currently includes two asymptotically optimal planners:
+
+- **Bidirectional Lazy Informed Trees (BLIT\*)**
+- **A second planner**, which will be released soon
+
+Additional implementations, documentation, and experimental results will be added as the project develops.
+
+## BLIT\* in This Repository
+
+The BLIT\* implementation provided in this repository is an **optimized standalone version** of the planner.
+
+Compared with the initial research implementation, this version:
+
+- uses our own optimized data structures;
+- improves computational efficiency and code organization;
+- is intended to provide a clean reference implementation of BLIT\*.
+
+A separate implementation designed for integration into the **OMPL core** will be released later.
