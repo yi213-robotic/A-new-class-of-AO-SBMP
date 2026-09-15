@@ -1,6 +1,6 @@
 # A New Class of Asymptotically Optimal Sampling-Based Motion Planners
 
-A new class of **asymptotically optimal sampling-based motion planners** built upon **lazy bidirectional heuristic search** will be released soon.
+A new class of **asymptotically optimal sampling-based motion planners** using **lazy bidirectional heuristic search** will be released soon.
 
 ## Overview
 
