@@ -15,7 +15,7 @@ Additional implementations, documentation, and experimental results will be adde
 
 The BLIT\* implementation provided in this repository is an **optimized standalone version** of the planner.
 
-Compared with the initial research implementation, this version:
+Compared with the previous research implementation and the OMPL core implementation, this version:
 
 - uses our own optimized data structures;
 - improves computational efficiency and code organization;
