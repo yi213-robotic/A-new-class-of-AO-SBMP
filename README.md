@@ -17,7 +17,7 @@ The BLIT\* implementation provided in this repository is an **optimized standalo
 
 Compared with the previous GitHub implementation and the OMPL core implementation, this version:
 
-- uses our own optimized data structures, especially for Nearest Neighbor queries and vertex-detachment operations;
+- uses our own optimized data structures, especially for Nearest Neighbor queries and child-detachment operations;
 - improves computational efficiency and code organization;
 - is intended to provide a clean reference implementation of BLIT\*.
 
