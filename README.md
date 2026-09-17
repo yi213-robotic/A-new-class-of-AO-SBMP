@@ -50,3 +50,7 @@ The C++ implementation is based on Dubins3D.jl from the Computational Robotics L
 The C++ translations, adaptations, and subsequent modifications were independently developed by Yi Wang.
 
 We gratefully acknowledge the original authors and developers for making their work publicly available.
+
+### Usage and Citation
+
+If you use or modify these implementations, please acknowledge the original authors, credit the C++ implementations developed by Yi Wang, and cite the relevant publications.
