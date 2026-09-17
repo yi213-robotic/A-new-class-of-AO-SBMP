@@ -25,7 +25,7 @@ A separate implementation designed for integration into the **OMPL core** will b
 
 ## Implementation and Attribution
 
-The C++ implementations of steering functions, including cost and time computations, for the following dynamical systems were developed by Yi Wang for the experimental evaluation and benchmarking in our IJRR manuscript:
+The C++ implementations of steering functions, including cost and time computations, for the following dynamical systems were developed by Yi Wang for the experimental evaluation and benchmarking in our Journal manuscript:
 
 - 4D double-integrator model
 - 10D linearized quadrotor model
