@@ -350,7 +350,7 @@ inline ompl::base::Cost trajCost(const ompl::base::State *src, const ompl::base:
 }
 
 
-inline void interpolate(double seg, ompl::base::State *state, bool pathN)
+inline void interpolateR(double seg, ompl::base::State *state, bool pathN)
 {
      const ob::RealVectorStateSpace::StateType *rstate = static_cast<ob::RealVectorStateSpace::StateType *>(state);  
      
