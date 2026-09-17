@@ -24,33 +24,29 @@ Compared with the previous GitHub implementation and the OMPL core implementatio
 A separate implementation designed for integration into the **OMPL core** will be released later.
 
 
+
 ## Implementation and Attribution
 
-**Author:** Yi Wang
-
-This repository provides C++ implementations of steering functions, including cost and time computations, for the following systems:
+The C++ implementations of the steering functions for the following dynamical systems were developed by Yi Wang for the experimental evaluation in our IJRR manuscript and have been incorporated into the Open Motion Planning Library (OMPL).
 
 - 4D double-integrator model
 - 10D linearized quadrotor model
 - 3D Dubins model
 
-
 ### Acknowledgments
 
-The C++ implementations of the following steering functions were developed by Yi Wang for the experimental evaluation and comparisons presented in our IJRR manuscript.
+**Double-Integrator and Quadrotor Models**
 
-**4D Double-Integrator and 10D Linearized Quadrotor Models**
-
-These implementations are based on the original MATLAB code developed by Dr. Dongliang Chang:
+The C++ implementations are based on the original MATLAB code developed by Dr. Dongliang Chang:
 
 [Accelerating Kinodynamic RRT* Through Dimensionality Reduction](https://github.com/dongliangCH/Accelerating-Kinodynamic-RRTstar-Through-Dimensionality-Reduction)
 
 **3D Dubins Model**
 
-This implementation is based on the Dubins3D.jl project developed by the Computational Robotics Laboratory:
+The C++ implementation is based on Dubins3D.jl from the Computational Robotics Laboratory:
 
 [Dubins3D.jl](https://github.com/comrob/Dubins3D.jl)
 
 The C++ translations, adaptations, and subsequent modifications were independently developed by Yi Wang.
 
-We gratefully acknowledge the original authors and developers for making their implementations publicly available.
+We gratefully acknowledge the original authors and developers for making their work publicly available.
