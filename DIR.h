@@ -89,7 +89,7 @@ inline ompl::base::Cost motionCost(ompl::base::State *src_,  ompl::base::State *
      return trajCost(src_,tar_,arriveTime_);
 }
 
-inline void interpolate(double t, double t_s, const ompl::base::State *src_, const ompl::base::State * tar_, ompl::base::State *state, bool pathN)
+inline void interpolateR(double t, double t_s, const ompl::base::State *src_, const ompl::base::State * tar_, ompl::base::State *state, bool pathN)
 {
 
       const auto *src10D = src_->as<ob::RealVectorStateSpace::StateType>(); 
