@@ -34,9 +34,12 @@ This repository provides C++ implementations of steering functions, including co
 - 10D linearized quadrotor model
 - 3D Dubins model
 
+
 ### Acknowledgments
 
-**Double-Integrator and Quadrotor Models**
+The C++ implementations of the following steering functions were developed by Yi Wang for the experimental evaluation and comparisons presented in our IJRR manuscript.
+
+**4D Double-Integrator and 10D Linearized Quadrotor Models**
 
 These implementations are based on the original MATLAB code developed by Dr. Dongliang Chang:
 
@@ -44,12 +47,10 @@ These implementations are based on the original MATLAB code developed by Dr. Don
 
 **3D Dubins Model**
 
-This implementation is based on Dubins3D.jl from the Computational Robotics Laboratory:
+This implementation is based on the Dubins3D.jl project developed by the Computational Robotics Laboratory:
 
 [Dubins3D.jl](https://github.com/comrob/Dubins3D.jl)
 
-The C++ translations and subsequent modifications or extensions were independently developed by Yi Wang.
+The C++ translations, adaptations, and subsequent modifications were independently developed by Yi Wang.
 
-### Usage and Citation
-
-If you use or modify these implementations, please appropriately acknowledge the original authors and cite the relevant publications.
+We gratefully acknowledge the original authors and developers for making their implementations publicly available.
