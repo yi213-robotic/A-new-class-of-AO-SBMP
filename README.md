@@ -23,15 +23,17 @@ Compared with the previous GitHub implementation and the OMPL core implementatio
 
 A separate implementation designed for integration into the **OMPL core** will be released later.
 
+
+
 ## Implementation and Attribution
 
-The C++ implementations of steering functions, including cost and time computations, for the following dynamical systems were developed by Yi Wang for the experimental evaluation and benchmarking in our Journal manuscript:
+The C++ implementations of steering functions, including cost and time computations, for the following dynamical systems were independently developed by Yi Wang through translation, adaptation, and modification for the experimental evaluation and benchmarking in our IJRR manuscript:
 
 - 4D double-integrator model
 - 10D linearized quadrotor model
 - 3D Dubins model
 
-These implementations can be used with the Open Motion Planning Library (OMPL) for testing and benchmarking motion planning algorithms.
+These implementations are compatible with the Open Motion Planning Library (OMPL) and can be used for testing and benchmarking motion planning algorithms.
 
 ### Acknowledgments
 
@@ -47,10 +49,8 @@ The C++ implementation is based on Dubins3D.jl from the Computational Robotics L
 
 [Dubins3D.jl](https://github.com/comrob/Dubins3D.jl)
 
-The C++ translations, adaptations, and subsequent modifications were independently developed by Yi Wang.
-
 We gratefully acknowledge the original authors and developers for making their work publicly available.
 
 ### Usage and Citation
 
-If you use or modify these implementations, please acknowledge the original authors, credit the C++ implementations developed by Yi Wang, and cite the relevant publications.
+If you use or modify these implementations, please acknowledge the original authors and the C++ implementation work, and cite the relevant publications.
