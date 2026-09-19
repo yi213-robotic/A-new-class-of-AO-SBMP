@@ -53,4 +53,4 @@ We gratefully acknowledge the original authors and developers for making their w
 
 ### Usage and Citation
 
-If you use or modify these implementations, please acknowledge the original authors, cridit the C++ implementation work, and cite the relevant publications.
+If you use or modify these implementations, please acknowledge the original authors, credit the C++ implementation work, and cite the relevant publications.
