@@ -296,18 +296,6 @@ namespace ompl
             blitstar::VertexQueue forwardVertexQueue_;
             blitstar::VertexQueue reverseVertexQueue_;
 
-            
-            // std::vector<std::pair<VertexPtr, VertexPtr>> FLVEdge;
-            // std::vector<std::pair<VertexPtr, VertexPtr>> IFLVEdge;
-            // std::vector<std::pair<VertexPtr, VertexPtr>> RLVEdge;
-            // std::vector<std::pair<VertexPtr, VertexPtr>> IRLVEdge;
-            
-            
-            // std::vector<std::pair<VertexPtr, VertexPtr>> FVEdge;
-            // std::vector<std::pair<VertexPtr, VertexPtr>> IFVEdge;
-            // std::vector<std::pair<VertexPtr, VertexPtr>> RVEdge;
-            // std::vector<std::pair<VertexPtr, VertexPtr>> IRVEdge;
-            
             /** \biref the best vertex*/
             VertexPtr bestVertex_;
             
