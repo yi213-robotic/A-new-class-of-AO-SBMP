@@ -23,7 +23,7 @@ Compared with the previous GitHub implementation and the OMPL core implementatio
 
 A separate implementation designed for integration into the **OMPL core** will be released later.
 
-
+## Benchmark Preview: Hard MotionBenchMaker Instances
 
 ## Implementation and Attribution
 
