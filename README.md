@@ -20,6 +20,7 @@ Compared with the previous GitHub implementation and the OMPL core implementatio
 - uses our own optimized data structures, especially for Nearest Neighbor queries and child-detachment operations;
 - improves computational efficiency and code organization;
 - is intended to provide a clean reference implementation of BLIT\*.
+- fixes some bugs.
 
 A separate implementation designed for integration into the **OMPL core** will be released later.
 
