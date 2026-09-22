@@ -24,6 +24,7 @@ Compared with the previous GitHub implementation and the OMPL core implementatio
 A separate implementation designed for integration into the **OMPL core** will be released later.
 
 ## Benchmark Preview: Hard MotionBenchMaker Instances
+<img width="3048" height="750" alt="hard_cases_banner" src="https://github.com/user-attachments/assets/d20ec8e5-289b-49f9-97c0-b556d62e1a05" />
 
 ## Implementation and Attribution
 
