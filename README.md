@@ -26,6 +26,7 @@ A separate implementation designed for integration into the **OMPL core** will b
 ## Benchmark Preview: Hard MotionBenchMaker Instances
 <img width="3048" height="750" alt="hard_cases_banner" src="https://github.com/user-attachments/assets/d20ec8e5-289b-49f9-97c0-b556d62e1a05" />
 
+Three challenging MotionBenchMaker instances selected for our evaluation: the 7-DOF Panda and 8-DOF Fetch reaching deep into shelf compartments, and the 14-DOF bimanual Baxter inserting both arms simultaneously. Green indicates the start configuration, red the goal configuration, and orange the end-effector path.
 ## Implementation and Attribution for kinodynamic and nonholonomic robotic systems
 
 The C++ implementations of steering functions, including cost and time computations, for the following dynamical systems were independently developed by Yi Wang through translation, adaptation, and modification for the experimental evaluation and benchmarking in our Journal manuscript:
