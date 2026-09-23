@@ -31,7 +31,8 @@
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
-// Authors: Yi Wang
+
+// Authors: Yi Wang, Eyal Weiss, Sven Koenig, Oren Salzman
 
 #ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_
 #define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_
@@ -67,9 +68,8 @@ namespace ompl
         {
         public:
             /** \brief Short names for commonly used BLIT* vertex types. */
-            using VertexPtr = britstar::VertexPtr;
-            using KeyVertexPair = britstar::KeyVertexPair; 
-            using VertexPtrVector = britstar::VertexPtrVector; 
+            using VertexPtr = blitstar::VertexPtr;
+            using KeyVertexPair = blitstar::KeyVertexPair; 
             using Cost = ompl::base::Cost;  
                       
             /** \brief Constructs a BLIT*. */
@@ -148,8 +148,8 @@ namespace ompl
             void clearForwardVertexQueue();
             
             /** \brief Resets the reverse or forward parent and g-cost of the vertex. */
-            void resetReverseValue(auto &vertex);
-            void resetForwardValue(auto &vertex); 
+            void resetReverseValue(const VertexPtr &vertex);
+            void resetForwardValue(const VertexPtr &vertex); 
             
             /** \brief Terminates the search while ensuring the meet-in-the-middle property. */
             bool terminateSearch(); 
@@ -159,18 +159,18 @@ namespace ompl
             void insertStartInForwardQueue();
             
             /** \brief Labels both endpoints of an edge that lies near an obstacle. */
-            void markNearObstacle(auto &child, auto &parent, bool forward_);
-            void markInCollision(auto &child, auto &parent, bool forward_, bool detach_);
+            void markNearObstacle(const VertexPtr &child, const VertexPtr &parent, bool forward_);
+            void markInCollision(const VertexPtr &child, const VertexPtr &parent, bool forward_, bool detach_);
             
             /** \brief Resets the forward or reverse parent information of the vertex. */
-            void resetForwardParentInformation(auto & vertex);   
-            void resetReverseParentInformation(auto & vertex); 
+            void resetForwardParentInformation(const VertexPtr & vertex);   
+            void resetReverseParentInformation(const VertexPtr & vertex); 
             
             /** \brief Selects the vertex with minimum priority in both queues for expansion. */
             bool selectExpandState(bool & forward);      
             
             /** \brief Checks whether the candidate path is collision-free. */
-            bool PathValidity(VertexPtr &vertex); 
+            bool pathValidity(VertexPtr &vertex); 
             void forwardPathValidating(VertexPtr &vertex, bool &validity);
             void reversePathValidating(VertexPtr &vertex, bool &validity);
             
@@ -209,10 +209,21 @@ namespace ompl
             void reverseVertexQueue(const VertexPtr &vertex, Cost CostToCome, Cost CostToGoal);
             
             /** \brief Returns the zero cost. */
-            Cost zeroCost() const
+            ompl::base::Cost zeroCost() const;            
+            
+            /** \brief Checks the start-goal edge before the search and registers it as the solution if collision-free. */
+            bool foundTrivialSolution();
+            
+            /** \brief Returns the motion cost of an edge computed using the robot model. */
+            ob::Cost robotMotionCost(const VertexPtr &target, const VertexPtr &source);
             
             /** \brief Refines the h-cost this vertex if needed. */
             void refineHCost(const VertexPtr &vertex, Cost &costToCome, Cost &costToGo, Cost gCur_,bool meet_);  
+            
+            /** \brief Compares or sum two costs. */
+            bool betterCost(const Cost & cost1, const Cost & cost2);
+            bool largerCost(const Cost & cost1, const Cost & cost2);
+            ompl::base::Cost sumCost(const Cost & cost1, const Cost & cost2);
 
         private:
             /** \brief Performs one iteration of BLIT*. */
@@ -297,6 +308,18 @@ namespace ompl
             blitstar::VertexQueue forwardVertexQueue_;
             blitstar::VertexQueue reverseVertexQueue_;
 
+            
+            // std::vector<std::pair<VertexPtr, VertexPtr>> FLVEdge;
+            // std::vector<std::pair<VertexPtr, VertexPtr>> IFLVEdge;
+            // std::vector<std::pair<VertexPtr, VertexPtr>> RLVEdge;
+            // std::vector<std::pair<VertexPtr, VertexPtr>> IRLVEdge;
+            
+            
+            // std::vector<std::pair<VertexPtr, VertexPtr>> FVEdge;
+            // std::vector<std::pair<VertexPtr, VertexPtr>> IFVEdge;
+            // std::vector<std::pair<VertexPtr, VertexPtr>> RVEdge;
+            // std::vector<std::pair<VertexPtr, VertexPtr>> IRVEdge;
+            
             /** \biref the best vertex*/
             VertexPtr bestVertex_;
             
