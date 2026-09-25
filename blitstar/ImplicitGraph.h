@@ -153,11 +153,8 @@ namespace ompl
                 std::size_t getNumberOfStateCollisionChecks() const;
 
                 /** \brief Get the number of nearest neighbor calls. */
-                std::size_t getNumberOfNearestNeighborCalls() const;
+                std::size_t getNumberOfNearestNeighborCalls() const;                
 
-            private:
-            
-                               
                 /** \brief Visits every current neighbor of the vertex in place. */
                 template <typename VisitNeighbor>
                 void visitEachNeighbor(const VertexPtr &vertex, VisitNeighbor &&visitNeighbor) const
@@ -172,6 +169,8 @@ namespace ompl
                         { visitNeighbor(neighbor);   }
                     }
                 } 
+
+            private:
                 /** \brief Computes the number of samples in the informed set. */
                 std::size_t computeNumberOfSamplesInInformedSet() const;
 
