@@ -57,3 +57,9 @@ We gratefully acknowledge the original authors and developers for making their w
 ### Usage and Citation
 
 If you use or modify these implementations, please acknowledge the original authors, credit the C++ implementation work, and cite the relevant publications.
+
+
+<--- cmake --build build -j4 && cmake --install build, cmake --build build-2.0 -j4 && cmake --build build-1.7 -j4 && cmake --build build-1.5 -j4
+,./build-1.5/demo_VAMPMotionBenchmaker --problem-file hard_one_panda.json --robot panda --problem-name bookshelf_small --planner BLITstar --anytime 0 --timeout 1 --dt 0.05 --collision fcl --batch 100 --stop-first --selfgate --selfgate-margin 0.02-->
+
+
